@@ -1,0 +1,38 @@
+.item1 {
+    grid-area: t1;
+}
+.item2 {
+    grid-area: t2;
+}
+.item3 {
+    grid-area: t3;
+}
+.item4 {
+    grid-area: t4;
+}
+.item5 {
+    grid-area: t5;
+}
+.item6 {
+    grid-area: t6;
+}
+.item7 {
+    grid-area: t7;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 't1 t2 t3'
+                         't4 t4 t4'
+                         't5 t6 t7';
+    grid-gap: 10px;
+    padding: 10px;
+    background-color: rgb(37, 37, 97);
+
+}
+.grid-container > div {
+    background-color: rgb(98, 98, 114);
+    font-size: 20px;
+    padding: 20px 0px;
+    text-align: center;
+}

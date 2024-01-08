@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Person Database</title>
+        <link rel="stylesheet" href="E:\Web Learning\Coursera Learning\css\project.css">
+        <script src="E:\Web Learning\Coursera Learning\js\project.js"></script>
+    </head>
+    <body>
+        <h1>DataBase</h1><hr><hr>
+        <div id="initial_bio" onmouseover="output()">
+            <form>
+                <div id="imageContainer">
+                    <img id="selectedImage" src="" alt="profile photo" onmouseover="changeOver();" onmouseleave="uploadImage();">
+                </div>
+                <label for="Fname">First Name: </label>
+                <input type="text" id="Fname" name="FName" required>
+                <label for="LName">Last Name: </label>
+                <input type="text" id="LName" name="LName" required><br>
+                <label for="bday">DOB</label>
+                <input type="date" id="bday" name="DOB" required><br>
+                <label>Contact via </label>
+                <input type="radio" id="contactMail" name="contact" value="emailCheck" onchange="modeContact()" required>email
+                <input type="radio" id="contactMobile" name="contact" value="mobileCheck" onchange="modeContact()" required>mobile
+                <br>
+            </form>
+            <div id="mode">
+                <span id="modeMail">
+                    <form>
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" name="email">
+                    </form>
+                </span>
+                <span id="modeMobile">
+                    <form>
+                        <label for="ph">Phone Number: </label>
+                        <input type="tel" id="ph" name="phone" placeholder="12345" value="+91">
+                    </form>
+                </span>
+            </div>
+            <form>
+                <label for="Proff_Acc">LinkedIn: </label>
+                <input type="url" id="Proff_Acc" name="LinkedIn" required>
+                <label for="Git_prof">Github: </label>
+                <input type="url" id="Git_prof" name="Github" required>
+            </form>
+            upload Image <input type="file" id="imageInput" name="File" accept="image/*"><br>
+            <button type="button" onclick="uploadImage();">upload</button>
+        </div>
+        <br>
+        <fieldset>
+            <legend>Communication Address</legend>
+            <form>
+                <span>
+                    Line 1 <input type="text" id="addr1" name="add_1">
+                </span>
+                <span>
+                    Line 2 <input type="text" id="addr2" name="add_2">
+                </span><br>
+                <span>
+                    City <input type="text" id="addr3" name="city">
+                </span>
+                <span>
+                    Pincode <input type="tel" id="addr4" name="pin" pattern="[0-9]{6}">
+                </span>
+            </form>
+        </fieldset>
+        <input type="checkbox" id="add_chk" name="Address_same" value="yes" onchange="addressChecker()">Address same as Communication Address?
+        <div id="Perm_addr">
+            <fieldset>
+                <legend>Permanent Address</legend>
+                <form>
+                    <span>
+                        Line 1 <input type="text" id="P_addr1" name="P_add_1">
+                    </span>
+                    <span>
+                        Line 2 <input type="text" id="P_addr2" name="P_add_2">
+                    </span><br>
+                    <span>
+                        City <input type="text" id="P_addr3" name="P_city">
+                    </span>
+                    <span>
+                        Pincode <input type="tel" id="P_addr4" name="P_pin" pattern="[0-9]{6}">
+                    </span>
+                </form>
+            </fieldset>
+        </div>
+        <fieldset>
+            <legend>Education</legend>
+            <form>
+                <label for="degree">Select highest qualification:</label>
+                <select id="degree" name="Degree">
+                    <option value="Metric">High School</option>
+                    <option value="Intermediate">Secondary School</option>
+                    <option value="Graduation">B.tech/B.E</option>
+                    <option value="PG">M.tech/MBA</option>
+                </select>
+            </form>
+        </fieldset>
+        <p id="output"></p>
+        <!-- <div class="image-container">
+            <img id="photo" src="" alt="Image 1" onmouseover="function1();" onmouseleave="function2()">
+        </div> -->
+    </body>
+</html>

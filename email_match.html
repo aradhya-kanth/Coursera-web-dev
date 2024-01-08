@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Email Match</title>
+        <link rel="stylesheet" href="E:\Web Learning\Coursera Learning\css\email_match.css">
+        <script src="E:\Web Learning\Coursera Learning\js\email_match.js"></script>
+    </head>
+    <body>
+        <form>
+            <label for="email_addr">Email Address: </label>
+            <input type="email" id="email_addr" name="email_addr" value="aradhya@gmail.com"><br>
+            <label for="con_addr">Confirm Address: </label>
+            <input type="email" id="con_addr" name="con_addr" onchange="return verify()"><br>
+            <input type="submit" onclick="return verify()">
+        </form>
+        <p id="print"></p>
+    </body>
+</html>

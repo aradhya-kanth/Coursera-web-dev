@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+}
+#modeMail {
+    display: none;
+}
+#modeMobile {
+    display: none;
+}
+#imageContainer {
+    display: none;
+    float: right;
+}
+#selectedImage {
+    margin-right: 5px;
+    border: 2px solid grey;
+}
+/* .image-container {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+} */
+
+/* #photo {
+    width: 200px;
+    height: 200px;
+/*     transition: transform 0.3s ease; 
+}*/
